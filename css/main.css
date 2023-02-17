@@ -1,0 +1,166 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  transition: all 0.75s ease-in-out;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  height: 1.8rem;
+  background: transparent;
+  border-radius: 1rem;
+}
+
+body {
+  background-color: #faf7f8;
+}
+
+img {
+  max-width: 100%;
+}
+
+.site-header {
+  background-color: #45166a;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  color: #c1c1c1;
+  gap: 1rem;
+  position: relative;
+}
+.site-header .site-details {
+  flex: 2;
+}
+.site-header .site-details a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.site-header .site-details .site-name {
+  color: #faf7f8;
+}
+.site-header .site-details .site-link .site-logo {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.site-header .site-nav {
+  flex: 7;
+}
+.site-header .site-nav .nav-wrap {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  gap: 0;
+  padding: 0;
+}
+.site-header .site-nav .nav-wrap a {
+  color: #faf7f8;
+  display: block;
+  padding: 0.6rem 1rem;
+}
+.site-header .site-nav .nav-wrap a:hover {
+  background: #fff;
+  color: #45166a;
+}
+.site-header .site-nav .nav-wrap li {
+  list-style: none;
+}
+.site-header .site-extra {
+  flex: 1;
+  display: flex;
+  gap: 0.7rem;
+  justify-content: flex-end;
+}
+.site-header .site-extra .nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #666766;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.site-header .site-extra .toggle-wrap {
+  height: 1.5rem;
+  width: 1.6rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 1px solid #666766;
+  position: relative;
+  padding: 0 0.25rem;
+}
+.site-header .site-extra .nav-toggle {
+  height: 2px;
+  background-color: #faf7f8;
+  width: 100%;
+  position: relative;
+}
+.site-header .site-extra .nav-toggle::before {
+  content: "";
+  top: -350%;
+  height: 2px;
+  background-color: #faf7f8;
+  width: 100%;
+  left: 0;
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+}
+.site-header .site-extra .nav-toggle::after {
+  content: "";
+  top: 350%;
+  height: 2px;
+  background-color: #faf7f8;
+  width: 100%;
+  left: 0;
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-toggle.toggle-open {
+  background: #45166a !important;
+}
+.nav-toggle.toggle-open::before {
+  top: 0 !important;
+  transform: rotate(45deg);
+}
+.nav-toggle.toggle-open::after {
+  top: 0 !important;
+  transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 1320px) {
+  .site-header .site-extra .toggle-wrap {
+    display: flex;
+  }
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    background-color: #45166a;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .site-nav .nav-wrap {
+    flex-direction: column;
+  }
+  .nav-open {
+    max-height: 1000%; /*This is to animate the change in display. To add animation.*/
+  }
+}/*# sourceMappingURL=main.css.map */
