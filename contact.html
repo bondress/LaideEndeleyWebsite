@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/all.min.css" />
     <script src="./js/all.min.js" defer></script>
     <script src="./js/script.js" defer></script>
+    <script src="./js/autocomplete.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -38,5 +39,33 @@
       <li><a href="./">Home</a></li>
       <li>Contact Me</li>
     </ul>
+    <div class="contact-container">
+      <div style="text-align: center;">
+        <h2>Contact Me</h2>
+        <p>Leave me a message and I'll be in touch asap!</p>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="./images/laide.jpg">
+        </div>
+        <div class="column">
+          <!-- Make sure you come back and complete the PHP part!!! -->
+          <form autocomplete="off" action="">
+            <label for="fname">First Name</label>
+            <input type="text" name="firstname" id="fname" placeholder="Your first name...">
+            <label for="lname">Last Name</label>
+            <input type="text" name="lastname" id="lname" placeholder="Your last name...">
+            <div class="autocomplete">
+              <label for="myInput">Country</label>
+              <input type="text" name="myCountry" id="myInput" placeholder="Your country...">
+            </div>
+            <br>
+            <label for="subject">Subject</label>
+            <textarea name="subject" id="subject" placeholder="Write something here..." style="height:200px"></textarea>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+    </div>  
   </body>
 </html>
